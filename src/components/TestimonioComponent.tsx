@@ -1,35 +1,31 @@
-import MenuComponent from "@/components/MenuComponent";
-import TestimonioComponent from "@/components/TestiminioComponent";
 import React from "react";
+import "../app/testimonio.css"
 
-const TestimonioPage: React.FC = () => {
+interface TestimonioProp {
+    nombre: string,
+    comentario: string,
+    imagen: string
 
-    const vectorTestimonios = [
-        {
-            nombre: "Adolfo",
-            comentario: "Muy buena el servicio, regresare", 
-            imagen: "/Testimonio1.jpg"
-        },
-        {
-            nombre: "Maxwel",
-            comentario: "No me lograron contactar", 
-            imagen: "/Testimonio2.jpg"
-        }
-    ]
-
-    return (
-        <div>
-            <MenuComponent></MenuComponent>
-            {
-                vectorTestimonios.map((persona, index) =>(
-                    <TestimonioComponent key={index}
-                        nombre={persona.nombre}
-                        comentario={persona.comentario}
-                        imagen={persona.imagen}></TestimonioComponent>
-                ))
-            }
-        </div>        
-    )
 }
 
-export default TestimonioPage;
+const TestimonioComponent: React.FC<TestimonioProp> = ({ nombre, comentario, imagen }) => {
+
+    return (
+            <div className="clientSection">
+                <div className="clientContainer">
+                    <div className="clientMember">
+                        <img
+                            src={imagen}
+                            className="clientPhoto"
+                            width={100}
+                            height={100}></img> 
+                            <h3>{nombre}</h3>                       
+                            <h3>{comentario}</h3>                       
+                        
+                    </div>
+                </div>
+            </div>
+            )
+}
+
+export default TestimonioComponent;

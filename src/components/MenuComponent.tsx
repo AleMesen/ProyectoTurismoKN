@@ -10,12 +10,12 @@ const MenuComponent : React.FC = () =>{
     return (
         <div>
             <nav className="bg-white border-b shadow-md">
-                <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+                <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center" >
                     <Link href="/" className="text-2xl font-bold text-blue-600">
                         Mi sitio turistico
                     </Link>
                     <div className="md:hidden">
-                        <button onClick={()=>setIsOpen(!isOpen)} className="text-gray-600"> 
+                        <button onClick={()=>setIsOpen(!isOpen)} className="text-gray-600">
                         <svg
                             className="w-6 h-6"
                             fill="none"
@@ -29,7 +29,7 @@ const MenuComponent : React.FC = () =>{
                                         strokeWidth={2}
                                         d="M6 18L18 6M6 6l12 12"
                                         >
-
+                                        
                                     </path>
                                 ):(
                                     <path
@@ -42,41 +42,41 @@ const MenuComponent : React.FC = () =>{
                                 )
                             }
                         </svg>
-                        </button>
+                        </button>                       
                     </div>
-                    <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
-                            <li><Link href="/testimonios">Testimonios</Link></li>
-                            <li><Link href="/contacto">Contacto</Link></li>
+                     <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
+                            <li><Link href="/testimonio">Testimonios</Link></li>
+                            <li><Link href="/contacto">Contacto</Link></li>   
                             <li className="relative group">
                                 <button>Reportes</button>
-                                <ul className="absolute hidden group-hover:block bg-white border shadow-md py-2 rounded z-10">
-                                    <li className="block px-4 py-2 hover:bg-gray-100"><Link href='/reporteUsuarios' >Usuarios</Link></li>
-                                    <li className="block px-4 py-2 hover:bg-gray-100"><Link href='/reporteComentarios' >Comentarios</Link></li>
+                                <ul className="absolute hidden group-hover:block bg-white border shadow-md mt2 py-2 rounded z-10">
+                                    <li className="block px-4 py-2 hover:bg-gray-100"><Link href='/reporteUsuarios'>Usuarios</Link></li>
+                                    <li className="block px-4 py-2 hover:bg-gray-100"><Link href='/reporteComentarios'>Comentarios</Link></li>
                                 </ul>
-                            </li>
+                            </li>                      
                     </ul>
                 </div>
                 {
-                    isOpen && (
-                        <ul className="md:hidden px-4 pb-4 space-y-2 text-gray-700 font-medium">
-                            <li><Link href="/testimonios">Testimonios</Link></li>
-                            <li><Link href="/contacto">Contacto</Link></li>
-                            <li> 
+                    isOpen &&(
+                         <ul className="md:hidden px-4 pb-4 space-y-2 text-gray-700 font-medium">
+                            <li><Link href="/testimonio">Testimonios</Link></li>
+                            <li><Link href="/contacto">Contacto</Link></li> 
+                            <li>
                                 <button className="w-full text-left"
                                         onClick={()=>setIsReportOpen(!isReportOpen)}>
                                             Reportes {
                                                 isReportOpen ?'▲' : '▼'
-                                            }   
+                                            }
                                 </button>
                                 {
                                     isReportOpen && (
-                                        <ul className="pl-4 mt1 space-y-1">
+                                        <ul className="pl-4 mt-1 space-y-1">
                                             <li><Link href='/reporteUsuarios'>Usuarios</Link></li>
                                             <li><Link href='/reporteComentarios'>Comentarios</Link></li>
                                         </ul>
                                     )
                                 }
-                            </li>
+                            </li>                    
                         </ul>
                     )
                 }
