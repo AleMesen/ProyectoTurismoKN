@@ -2,7 +2,7 @@
 import { LoginIn } from "@/models/LoginIn";
 import { LoginOut } from "@/models/LoginOut";
 import axios from "axios";
-import React, { use, useState } from "react";
+import React, {useState } from "react";
 
 const LoginPage: React.FC = () => {
 
@@ -11,7 +11,7 @@ const LoginPage: React.FC = () => {
     const [mostrarModal, setMostrarModal] = useState<boolean>(false);
 
     async function ValidarCredenciales() {
-        /*Consumo del api y despliegue del error*/
+        /*Consume del api y despliegue del error*/
         const loginData = new LoginIn(correo, password);
 
         try
@@ -28,10 +28,9 @@ const LoginPage: React.FC = () => {
             {
                 setMostrarModal(true);
             }
-
         }
         catch(error){
-            console.log("Hay un error en el consumo del api",error);
+            console.log("Hay un error en el consumo del api");
         }
     }
 
@@ -66,7 +65,7 @@ const LoginPage: React.FC = () => {
                         </div>
                         <button
                             onClick={ValidarCredenciales}
-                            className="bg-blue-500 w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Confirmar credenciales</button>
+                            className="bg-blue-500 w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Confirma credenciales</button>
                     </div>
                 </div>
             </div>
