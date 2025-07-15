@@ -31,7 +31,7 @@ const LoginPage: React.FC = () => {
 
         }
         catch(error){
-            console.log("Hay un error en el consumo del api");
+            console.log("Hay un error en el consumo del api",error);
         }
     }
 
