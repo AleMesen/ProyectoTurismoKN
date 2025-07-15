@@ -22,13 +22,13 @@ const ReporteUsuarios: React.FC = () =>{
             obtenerUsuarios();
     }, [])
 
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const usuarioFiltrados = useMemo(()=>{
         return usuarios.filter(usuario => usuario.nombre.toUpperCase().includes(filtro.toUpperCase())
                                       || usuario.correo.toUpperCase().includes(filtro.toUpperCase())
                                       || usuario.telefono.toUpperCase().includes(filtro.toUpperCase())
                                       || ObtenerNombreRol(usuario.rol).toUpperCase().includes(filtro.toUpperCase()))
-    }, [filtro])
+    }, [filtro]) 
 
     function ObtenerNombreRol (rol: number){
 
