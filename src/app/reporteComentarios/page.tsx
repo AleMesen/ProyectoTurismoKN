@@ -9,6 +9,7 @@ import { ComentarioOut, ReporteComentariosOut } from "@/models/ReporteComentario
 import VentanaMensajesComponent from "@/components/VentanaMensajesComponent";
 import Footer from "@/components/Footer";
 
+
 // Importa los estilos
 import "../styles/ReporteComentarios.css";
 

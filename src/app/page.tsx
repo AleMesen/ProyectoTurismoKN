@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import VentanaMensajesComponent from "@/components/VentanaMensajesComponent";
 import "./styles/HomePage.css";

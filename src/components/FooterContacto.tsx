@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import "@/app/styles/Footer.css"
 import { Globe, MessageCircle, Camera, PlayCircle } from 'lucide-react';
