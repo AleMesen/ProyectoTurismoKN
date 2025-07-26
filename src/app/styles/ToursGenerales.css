@@ -1,0 +1,282 @@
+:root { 
+    --c-text: #005240;
+    --c-text-green: #c4dcc4;
+    --c-text-light: #fcfaf2;
+    --c-text-dark: #0c0f0f;
+    --c-background: #fff;
+    --c-border: #005240;
+    --c-primary: #005240;
+    --c-bg-yellow: #ffe89e;
+    --c-bg-yellow-dark: #fedd74;
+    --c-bg-pink: #ffc6de;
+    --c-bg-pink-med: #fa97f1;
+    --c-bg-pink-dark: #e458d7;
+    --c-bg-green: #c4dcc4;
+    --c-bg-green-dark: #005240;
+    --c-bg-blue: #b6e0e0;
+    --c-bg-blue-dark: #49a2a2;
+    --c-bg-orange: #ff6e2e;
+    --c-bg-orange-light: #fd9c72;
+    --c-bg-red: #ff6867;
+    --c-bg-red-dark: #f74c4b;
+    --c-bg-xdark: #de3535;
+    --c-bg-black: #0c0f0f;
+    --c-bg-sand: #fcfaf2;
+    --c-highlight: #fcfaf2;
+    --c-highlight-yellow: #fedd74;
+    --c-highlight-pink: #fa97f1;
+    --c-muted: #fcfaf2;
+    --c-warning: #ffe89e;
+    --c-error: #f74c4b;
+    --c-message: #c4dcc4;
+    --c-accent: #005240;
+    --c-accent-high: #c4dcc4;
+    --c--darkBrown: #573827;
+    --c--lightBrown: #a06748;
+    --c-bg-darkorange: rgb(231, 94, 35);
+}
+
+/*Diseño general para las actividades*/
+
+.general-hero-tour {
+  width: 100vw;
+  height: 60vh;
+  background-color: var(--c-accent-high);
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-start;
+  padding: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--c-text);
+}
+
+
+.general-hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.general-hero-content p {
+  font-size: 1.25rem;
+}
+
+
+
+/*DISEÑO AVENTURA*/
+/* CONTENEDOR PRINCIPAL */
+.aventura-tour-details {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* FONDO DE CADA SECCIÓN CON ALTERNANCIA */
+.aventura-activity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.aventura-activity:nth-child(1) {
+  background-color: var(--c-bg-orange-light);
+}
+
+.aventura-activity:nth-child(2) {
+  background-color: var(--c-bg-yellow);
+  flex-direction: row-reverse;
+}
+
+.aventura-activity:nth-child(3) {
+  background-color: #e0f2fe;
+}
+
+/* CUADRO DE LA IMAGEN */
+.aventura-image-wrapper {
+  background-color: #ffffff;
+  border-radius: 0; /* Sin bordes redondos */
+  aspect-ratio: 1 / 1; /* Siempre cuadrado */
+  width: 550px; /* Se adapta al ancho del viewport */
+  height: 450px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* IMAGEN DENTRO DEL CUADRO */
+.aventura-activity-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* CONTENIDO DE TEXTO */
+.aventura-activity-info {
+  width: 45%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.aventura-activity-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  color: #064e3b;
+}
+
+.aventura-activity-info p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* BOTÓN */
+.aventura-activity-button {
+  background-color: var(--c-bg-green-dark);
+  color: var(--c-background);
+  padding: 0.65rem 1.3rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 600;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.aventura-activity-button:hover {
+  background-color: #047857;
+}
+
+@media (max-width: 768px) {
+  .aventura-activity-section {
+    flex-direction: column !important;
+  }
+
+  .aventura-image-wrapper {
+    width: 250px;
+    height: 250px;
+  }
+
+  .aventura-activity-text {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+
+/*DISEÑO NATURALEZA*/
+
+.naturaleza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.naturaleza-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.naturaleza-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.naturaleza-info h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #166534;
+}
+
+.naturaleza-info p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.naturaleza-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #166534;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.naturaleza-button:hover {
+  background-color: #14532d;
+}
+
+
+
+/*DISEÑO PLAYA*/
+
+.playa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.playa-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playa-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.playa-info h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #0c4a6e;
+}
+
+.playa-info p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.playa-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #0c4a6e;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.playa-button:hover {
+  background-color: #083344;
+}

@@ -1,5 +1,6 @@
 import React from "react";
-import "../app/testimonio.css"
+import "../app/styles/Testimonio.css";
+
 
 interface TestimonioProp {
     nombre: string,
@@ -8,24 +9,26 @@ interface TestimonioProp {
 
 }
 
-const TestimonioComponent: React.FC<TestimonioProp> = ({ nombre, comentario, imagen }) => {
-
-    return (
-            <div className="clientSection">
-                <div className="clientContainer">
-                    <div className="clientMember">
-                        <img
-                            src={imagen}
-                            className="clientPhoto"
-                            width={100}
-                            height={100}></img> 
-                            <h3>{nombre}</h3>                       
-                            <h3>{comentario}</h3>                       
-                        
-                    </div>
-                </div>
-            </div>
-            )
-}
+const TestimonioComponent: React.FC<TestimonioProp> = ({
+  nombre,
+  comentario,
+  imagen,
+}) => {
+  return (
+    <div className="clientMember">
+      <img
+        src={imagen}
+        className="clientPhoto"
+        alt={`Foto de ${nombre}`}
+        width={100}
+        height={100}
+      />
+      <div className="clientText">
+        <h3 className="clientName">{nombre}</h3>
+        <p className="clientComment">{comentario}</p>
+      </div>
+    </div>
+  );
+};
 
 export default TestimonioComponent;

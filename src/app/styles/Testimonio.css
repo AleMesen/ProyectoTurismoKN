@@ -1,0 +1,137 @@
+:root { 
+    --c-text: #005240;
+    --c-text-green: #c4dcc4;
+    --c-text-light: #fcfaf2;
+    --c-text-dark: #0c0f0f;
+    --c-background: #fff;
+    --c-border: #005240;
+    --c-primary: #005240;
+    --c-bg-yellow: #ffe89e;
+    --c-bg-yellow-dark: #fedd74;
+    --c-bg-pink: #ffc6de;
+    --c-bg-pink-med: #fa97f1;
+    --c-bg-pink-dark: #e458d7;
+    --c-bg-green: #c4dcc4;
+    --c-bg-green-dark: #005240;
+    --c-bg-blue: #b6e0e0;
+    --c-bg-blue-dark: #49a2a2;
+    --c-bg-orange: #ff6e2e;
+    --c-bg-orange-light: #fd9c72;
+    --c-bg-red: #ff6867;
+    --c-bg-red-dark: #f74c4b;
+    --c-bg-xdark: #de3535;
+    --c-bg-black: #0c0f0f;
+    --c-bg-sand: #fcfaf2;
+    --c-highlight: #fcfaf2;
+    --c-highlight-yellow: #fedd74;
+    --c-highlight-pink: #fa97f1;
+    --c-muted: #fcfaf2;
+    --c-warning: #ffe89e;
+    --c-error: #f74c4b;
+    --c-message: #c4dcc4;
+    --c-accent: #005240;
+    --c-accent-high: #c4dcc4;
+    --c--darkBrown: #573827;
+    --c--lightBrown: #a06748;
+}
+
+.clientSection {
+  padding: 6rem 2rem;
+  background-color: var(--c-bg-blue-dark);
+}
+
+.clientContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.clientMember {
+  display: flex;
+  align-items: center;
+  background-color: var(--c-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.329);
+  width: 100%;
+  max-width: 700px;
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.clientPhoto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.clientName {
+  font-weight: bold;
+  color: var(--c-bg-green-dark);
+  margin-bottom: 0.5rem;
+}
+
+.clientText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clientComment {
+  color: var(--c-bg-green-dark);
+  font-size: 0.95rem;
+}
+
+
+
+
+
+.testimonio-intro {
+  width: 100vw;
+  height: 60vh;
+  background-color: var(--c-bg-blue);
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-start;
+  padding: 3rem;
+}
+
+.testimonio-content {
+  display: flex;
+  flex-direction: column; /* Alinea el h1 encima del p */
+  max-width: 600px;
+  color: #440000;
+}
+
+.testimonio-intro h1 {
+  font-size: 4rem;
+  color: var(--c-bg-green-dark);
+  margin-bottom: 1rem;
+}
+
+.testimonio-intro p {
+  font-size: 1.25rem;
+  color: var(--c-bg-green-dark);
+  line-height: 1.8;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .clientMember {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .clientText {
+    align-items: center;
+  }
+}

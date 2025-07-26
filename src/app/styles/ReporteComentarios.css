@@ -1,0 +1,103 @@
+:root { 
+    --c-text: #005240;
+    --c-text-green: #c4dcc4;
+    --c-text-light: #fcfaf2;
+    --c-text-dark: #0c0f0f;
+    --c-background: #fff;
+    --c-border: #005240;
+    --c-primary: #005240;
+    --c-bg-yellow: #ffe89e;
+    --c-bg-yellow-dark: #fedd74;
+    --c-bg-pink: #ffc6de;
+    --c-bg-pink-med: #fa97f1;
+    --c-bg-pink-dark: #e458d7;
+    --c-bg-green: #c4dcc4;
+    --c-bg-green-dark: #005240;
+    --c-bg-blue: #b6e0e0;
+    --c-bg-blue-dark: #49a2a2;
+    --c-bg-orange: #ff6e2e;
+    --c-bg-orange-light: #fd9c72;
+    --c-bg-red: #ff6867;
+    --c-bg-red-dark: #f74c4b;
+    --c-bg-xdark: #de3535;
+    --c-bg-black: #0c0f0f;
+    --c-bg-sand: #fcfaf2;
+    --c-highlight: #fcfaf2;
+    --c-highlight-yellow: #fedd74;
+    --c-highlight-pink: #fa97f1;
+    --c-muted: #fcfaf2;
+    --c-warning: #ffe89e;
+    --c-error: #f74c4b;
+    --c-message: #c4dcc4;
+    --c-accent: #005240;
+    --c-accent-high: #c4dcc4;
+    --c--darkBrown: #573827;
+    --c--lightBrown: #a06748;
+}
+.reporte-comentarios-container {
+  width: 100%; /* ocupa todo el ancho */
+  padding: 10rem 0.5rem;
+  background-color: var(--c-bg-pink);
+}
+
+.tabla-comentarios-container {
+  width: 80%;
+  max-width: 70rem;
+  margin: 2rem auto; /* centra */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.329);
+  overflow-x: auto;
+}
+
+.tabla-comentarios {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--c-background);
+}
+
+.thead-comentarios {
+  background-color: var(--c-bg-red); 
+  color: var(--c-bg-pink);
+}
+
+.th-comentarios {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.tbody-comentarios {
+  color: var(--c-bg-black); 
+  border-top: 1px solid var(--c-bg-pink);
+  border-bottom: 1px solid var(--c-bg-pink);
+}
+
+.tr-comentarios {
+  border-bottom: 1px solid var(--c-bg-pink); 
+}
+
+.td-comentarios {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+
+
+.reporte-comentarios-hero {
+  width: 100vw;
+  height: 60vh;
+  background-color: var(--c-bg-red);
+  display: flex;
+  align-items:flex-end;
+  justify-content: flex-start;
+  padding: 3rem;
+}
+
+.reporte-comentarios-titulo {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--c-bg-pink);
+  margin: 0;
+}
